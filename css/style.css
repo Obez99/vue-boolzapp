@@ -4,6 +4,8 @@
   box-sizing:border-box;
 }
 
+/*SELECTORS*/
+/****************************************/
 body{
   background-color: lightgray;
   overflow: hidden;
@@ -21,21 +23,57 @@ a{
   color:gray
 }
 
+p{
+  margin-bottom: 0;
+  color:gray
+}
+
+h5{
+  margin-bottom: 0;
+}
+
 .side-section-notifications strong{
   display: block;
   font-size: 17px;
 }
-.side-section-user img{
+.section-user img{
   height: 70%;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+
+.side-section, .right-section{
+  height: 100%;
+}
+
+.side-section-header, .right-section-header{
+  height: 80px;
+  background-color: #eaeaea;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat img{
+  height: 80%;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
+.chat-preview p{
+  color:#bfc3c5;
 }
 
 .background-header{
   height: 125px;
   background-color:darkcyan;
 }
+/****************************************/
 
+/*CLASSES*/
+/****************************************/
 .main-container{
   max-width: 1500px;
   height: 930px;
@@ -46,10 +84,6 @@ a{
   display: flex;
 }
 
-.side-section, .right-section{
-  height: 100%;
-}
-
 .side-section{
   width: 35%;
   background-color: #fafafa;
@@ -58,16 +92,7 @@ a{
   flex-direction: column;
 }
 
-.side-section-header{
-  height: 100px;
-  background-color: #eaeaea;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.side-section-user{
+.section-user{
   height: 100%;
   margin-left: 20px;
   cursor: default;
@@ -75,7 +100,7 @@ a{
   align-items: center;
 }
 
-.side-section-buttons{
+.section-buttons{
   height: 100%;
   margin-right: 20px;
   display: flex;
@@ -116,26 +141,11 @@ a{
   align-items: center;
 }
 
-.chat img{
-  height: 80%;
-  border-radius: 50%;
-  margin: 0 20px;
-}
-
-.chat-preview p{
-  color:#bfc3c5;
-}
-
 .chat-preview-date{
   color:#bfc3c5;
   position: absolute;
   top:5px;
   right: 10px;
-}
-
-.right-section{
-  width: 65%;
-  background-color: lime;
 }
 
 .fa-bell-slash{
@@ -155,6 +165,7 @@ a{
 .input-group{
   height: 100%;
 }
+
 .input-group-text{
   background-color: white;
   border-right: none;
@@ -167,3 +178,15 @@ a{
   border-radius: 5px;
   border-color: rgb(236, 233, 233);
 }
+
+
+.right-section{
+  width: 65%;
+  
+}
+
+.right-section-header{
+  border-left: 2px solid lightgray;
+}
+
+/****************************************/
