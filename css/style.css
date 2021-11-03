@@ -135,10 +135,16 @@ h5{
 .chat{
   height: calc(100% / 7);
   border-top: 1px solid #f5f5f5;
+  cursor: pointer;
+  transition: background-color 0.3s;
   position: relative;
 
   display: flex;
   align-items: center;
+}
+
+.chat:hover{
+  background-color: lightgray;
 }
 
 .chat-preview-date{
