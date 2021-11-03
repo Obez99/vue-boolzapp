@@ -78,7 +78,7 @@ h5{
 }
 
 .right-section-footer input{
-  height: 70%;
+  height: 60px;
 }
 /****************************************/
 
@@ -121,6 +121,7 @@ h5{
   height: 110px;
   background-color: #8edafa;
   font-size: 15px;
+  padding: 20px 0;
 
   display: flex;
   align-items: center;
@@ -154,7 +155,7 @@ h5{
 }
 
 .chat:hover{
-  background-color: lightgray;
+  background-color: rgb(231, 229, 229);
 }
 
 .chat-preview-date{
@@ -206,7 +207,7 @@ h5{
 
 .right-section-main{
   flex-grow: 1;
-  padding: 50px 0;
+  padding-top: 50px;
   overflow: auto;
   position: relative;
 }
@@ -253,6 +254,7 @@ h5{
 
 .right-section-footer{
   width: 100%;
+  padding: 20px 0;
 }
 
 
