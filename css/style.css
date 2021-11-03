@@ -120,3 +120,19 @@ a{
   align-items: center;
   justify-content: center;
 }
+
+.input-group{
+  height: 100%;
+}
+.input-group-text{
+  background-color: white;
+  border-right: none;
+  color:gray;
+  border-color: rgb(236, 233, 233);
+}
+
+.form-control{
+  border-left: none;
+  border-radius: 5px;
+  border-color: rgb(236, 233, 233);
+}
