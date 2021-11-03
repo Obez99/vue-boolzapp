@@ -100,6 +100,36 @@ a{
 .side-section-chats{
   margin-right: 20px;
   background-color: white;
+  border-right: 1px solid lightgray;
+  overflow: auto;
+
+  flex-grow: 1;
+}
+
+.chat{
+  height: calc(100% / 7);
+  border-top: 1px solid lightgray;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.chat img{
+  height: 80%;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
+.chat-preview p{
+  color:lightgray;
+}
+
+.chat-preview-date{
+  color:lightgray;
+  position: absolute;
+  top:5px;
+  right: 10px;
 }
 
 .right-section{
