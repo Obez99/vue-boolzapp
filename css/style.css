@@ -20,5 +20,20 @@ body{
   margin: auto;
   position: relative;
   top:-100px;
-  background-color: red;
+  background-image: url("../img/mine.jpg");
+  display: flex;
+}
+
+.side-section, .right-section{
+  height: 100%;
+}
+
+.side-section{
+  width: 35%;
+  background-color: blue;
+}
+
+.right-section{
+  width: 65%;
+  background-color: lime;
 }
