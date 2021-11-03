@@ -70,6 +70,16 @@ h5{
   height: 125px;
   background-color:darkcyan;
 }
+
+.right-section-footer button{
+  margin:0 30px;
+  font-size: 30px;
+  color:gray
+}
+
+.right-section-footer input{
+  height: 70%;
+}
 /****************************************/
 
 /*CLASSES*/
@@ -197,6 +207,7 @@ h5{
 .right-section-main{
   flex-grow: 1;
   padding: 50px 0;
+  overflow: auto;
   position: relative;
 }
 
@@ -244,14 +255,5 @@ h5{
   width: 100%;
 }
 
-.right-section-footer button{
-  margin:0 30px;
-  font-size: 30px;
-  color:gray
-}
-
-.right-section-footer input{
-  height: 70%;
-}
 
 /****************************************/
