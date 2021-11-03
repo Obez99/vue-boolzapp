@@ -1,0 +1,24 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background-color: lightgray;
+  overflow: hidden;
+}
+
+.background-header{
+  height: 125px;
+  background-color:darkcyan;
+}
+
+.main-container{
+  width: 1500px;
+  height: 900px;
+  margin: auto;
+  position: relative;
+  top:-100px;
+  background-color: red;
+}
