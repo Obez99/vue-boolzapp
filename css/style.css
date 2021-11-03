@@ -47,7 +47,7 @@ h5{
   height: 100%;
 }
 
-.side-section-header, .right-section-header{
+.side-section-header, .right-section-header, .right-section-footer{
   height: 80px;
   background-color: #eaeaea;
 
@@ -182,11 +182,70 @@ h5{
 
 .right-section{
   width: 65%;
-  
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.right-section-main{
+  flex-grow: 1;
+  padding: 50px 0;
+  position: relative;
+}
+
+.message{
+  min-width: 100px;
+  max-width: 300px;
+  border-radius: 10px;
+  padding:20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.message-content{
+  color: black;
+}
+
+.message-date{
+  font-weight: normal;
+  font-size: 13px;
+  color:lightgray;
+  text-align: right;
+  position: absolute;
+  bottom:3px;
+  right:10px;
+}
+
+.sent{
+  background-color: #d6f9be;
+  margin-left: 65%;
+}
+
+.received{
+  background-color: white;
+  margin-left: 40px;
 }
 
 .right-section-header{
   border-left: 2px solid lightgray;
+}
+
+.right-section-footer{
+  width: 100%;
+}
+
+.right-section-footer button{
+  margin:0 30px;
+  font-size: 30px;
+  color:gray
+}
+
+.right-section-footer input{
+  height: 70%;
 }
 
 /****************************************/
