@@ -103,7 +103,8 @@
         <div class="right-section-footer">
           <!--Message input, emoji and voice message buttons-->
           <button><i class="far fa-smile"></i></button>
-          <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+          <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="writtenMessage"
+            @keyup.enter="sendMessage(writtenMessage)">
           <button><i class="fas fa-microphone"></i></button>
         </div>
       </div>

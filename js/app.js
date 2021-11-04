@@ -88,12 +88,20 @@ const app = new Vue({
         ],
       }
     ],
-
-    activeChat: {}
+    activeChat: {},
+    writtenMessage: ""
   },
   methods: {
     setActiveChat: function (obj) {
       this.activeChat = obj
+    },
+    sendMessage: function (str) {
+      const newMessage = {
+        status: "sent",
+        text: str
+      }
+      this.activeChat.messages.push(newMessage);
+      this.writtenMessage = "";
     }
   }
 })
