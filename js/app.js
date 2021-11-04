@@ -7,6 +7,7 @@ const app = new Vue({
       {
         name: "Michele",
         image: "img/avatar_1.jpg",
+        date: "10/01/2020 16:15:22",
         messages: [
           {
             text: "Hai portato a spasso il cane?",
@@ -29,6 +30,7 @@ const app = new Vue({
       {
         name: "Fabio",
         image: "img/avatar_2.jpg",
+        date: "10/01/2020 16:15:22",
         messages: [
           {
             text: "Ciao come stai?",
@@ -50,6 +52,7 @@ const app = new Vue({
       {
         name: "Samuele",
         image: "img/avatar_3.jpg",
+        date: "10/01/2020 16:15:22",
         messages: [
           {
             text: "La Marianna va in campagna?",
@@ -71,6 +74,7 @@ const app = new Vue({
       {
         name: "Luisa",
         image: "img/avatar_4.jpg",
+        date: "10/01/2020 16:15:22",
         messages: [
           {
             text: "Lo sai che ha aperto una nuova pizzeria?",

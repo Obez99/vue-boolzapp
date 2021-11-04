@@ -74,11 +74,10 @@
 
           <!--Right section header profile-->
           <div class="section-user">
-            <img src="img/avatar_1.jpg" alt="my-profile-pic">
+            <img :src="activeChat.image" :alt="activeChat.name">
             <div>
-              <h5>Michele</h5>
-              <p>Ultimo accesso oggi alle 10/01/2020
-                16:15:22
+              <h5>{{activeChat.name}}</h5>
+              <p v-if="activeChat.date">Ultimo accesso oggi alle {{activeChat.date}}
               </p>
             </div>
           </div>
