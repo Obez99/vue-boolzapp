@@ -66,10 +66,6 @@ h5{
   color:#bfc3c5;
 }
 
-.background-header{
-  height: 125px;
-  background-color:darkcyan;
-}
 
 .right-section-footer button{
   margin:0 30px;
@@ -84,8 +80,14 @@ h5{
 
 /*CLASSES*/
 /****************************************/
+.background-header{
+  height: 125px;
+  background-color:darkcyan;
+}
+
 .main-container{
   max-width: 1500px;
+  min-width: 1100px;
   height: 930px;
   margin: auto;
   position: relative;
