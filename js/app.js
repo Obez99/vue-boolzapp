@@ -6,23 +6,90 @@ const app = new Vue({
     contacts: [
       {
         name: "Michele",
-        image: "img/avatar_1.jpg"
+        image: "img/avatar_1.jpg",
+        messages: [
+          {
+            text: "Hai portato a spasso il cane?",
+            status: "sent"
+          },
+
+          {
+            text: "Ricordati di dargli da mangiare",
+            status: "sent"
+          },
+
+          {
+            text: "Tutto fatto?",
+            status: "received"
+          }
+        ],
+
       },
 
       {
         name: "Fabio",
-        image: "img/avatar_2.jpg"
+        image: "img/avatar_2.jpg",
+        messages: [
+          {
+            text: "Ciao come stai?",
+            status: "sent"
+          },
+
+          {
+            text: "Bene grazie! Stasera ci vediamo?",
+            status: "received"
+          },
+
+          {
+            text: "Mi piacerebbe ma devo andare a fare la spesa.",
+            status: "received"
+          }
+        ],
       },
 
       {
         name: "Samuele",
-        image: "img/avatar_3.jpg"
+        image: "img/avatar_3.jpg",
+        messages: [
+          {
+            text: "La Marianna va in campagna?",
+            status: "received"
+          },
+
+          {
+            text: "Sicuro di non aver sbagliato chat?",
+            status: "sent"
+          },
+
+          {
+            text: "Ah scusa!",
+            status: "received"
+          }
+        ],
       },
 
       {
         name: "Luisa",
-        image: "img/avatar_4.jpg"
-      },
-    ]
+        image: "img/avatar_4.jpg",
+        messages: [
+          {
+            text: "Lo sai che ha aperto una nuova pizzeria?",
+            status: "sent"
+          },
+
+          {
+            text: "Si, ma preferirei andare al cinema",
+            status: "received"
+          }
+        ],
+      }
+    ],
+
+    activeChat: {}
+  },
+  methods: {
+    setActiveChat: function (obj) {
+      this.activeChat = obj
+    }
   }
 })
