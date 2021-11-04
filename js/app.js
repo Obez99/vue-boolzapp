@@ -95,6 +95,7 @@ const app = new Vue({
     setActiveChat: function (obj) {
       this.activeChat = obj
     },
+
     sendMessage: function (str) {
       str = str.trim()
       if (str === "")
@@ -104,8 +105,20 @@ const app = new Vue({
         status: "sent",
         text: str
       }
+
       this.activeChat.messages.push(newMessage);
       this.writtenMessage = "";
+
+      setTimeout(function () {
+        const newResponse =
+        {
+          status: "received",
+          text: "ok"
+        }
+
+        app.activeChat.messages.push(newResponse)
+      }, 1000)
     }
+
   }
 })
