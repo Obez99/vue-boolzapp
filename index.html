@@ -49,13 +49,14 @@
         <div class="side-section-search">
           <div class="input-group mb-3">
             <span class="input-group-text"><i class="fas fa-search"></i></span>
-            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" v-model="contactSearch"
+              @keyup="nameSearch()">
           </div>
         </div>
 
         <!--Left chats-->
         <div class="side-section-chats">
-          <div class="chat" v-for="contact in contacts" @click="setActiveChat(contact)">
+          <div class="chat" v-for="contact in filteredContacts" @click="setActiveChat(contact)">
             <img :src="contact.image" :alt="contact.name">
             <div class="chat-preview">
               <h5>{{contact.name}}</h5>
