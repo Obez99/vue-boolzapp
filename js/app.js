@@ -96,6 +96,10 @@ const app = new Vue({
       this.activeChat = obj
     },
     sendMessage: function (str) {
+      str = str.trim()
+      if (str === "")
+        return
+
       const newMessage = {
         status: "sent",
         text: str
