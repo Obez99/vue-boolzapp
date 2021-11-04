@@ -100,7 +100,7 @@
 
         </div>
 
-        <div class="right-section-footer">
+        <div class="right-section-footer" v-if="activeChat.name">
           <!--Message input, emoji and voice message buttons-->
           <button><i class="far fa-smile"></i></button>
           <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="writtenMessage"
