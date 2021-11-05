@@ -112,7 +112,7 @@
               </div>
             </div>
             <p class="message-content">{{message.text}}</p>
-            <p class="message-date">{{message.messageDate}}</p>
+            <p class="message-date">{{message.date}}</p>
           </div>
 
 
@@ -124,7 +124,9 @@
           <button><i class="far fa-smile"></i></button>
           <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="writtenMessage"
             @keyup.enter="sendMessage(writtenMessage)">
-          <button><i class="fas fa-microphone"></i></button>
+          <button v-if="writtenMessage.length===0"><i class="fas fa-microphone"></i></button>
+          <button v-else @click="sendMessage(writtenMessage)"><i class="fas fa-paper-plane"
+              style="color:rgb(55, 55, 173)"></i></button>
         </div>
       </div>
     </div>
