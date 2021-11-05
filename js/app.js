@@ -138,8 +138,9 @@ const app = new Vue({
       })
     },
 
-    getLastDate: function () {
-
+    getLastMessage: function (i) {
+      const arrLength = this.contacts[i].messages.length;
+      return this.contacts[i].messages[arrLength - 1].text;
     }
   },
 })

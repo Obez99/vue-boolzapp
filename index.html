@@ -56,11 +56,11 @@
 
         <!--Left chats-->
         <div class="side-section-chats">
-          <div class="chat" v-for="contact in nameSearch()" @click="setActiveChat(contact)">
+          <div class="chat" v-for="(contact,i) in nameSearch()" @click="setActiveChat(contact)">
             <img :src="contact.image" :alt="contact.name">
             <div class="chat-preview">
               <h5>{{contact.name}}</h5>
-              <p>Tutto fatto! ...</p>
+              <p>{{getLastMessage(i)}}</p>
             </div>
             <div class="chat-preview-date">
               <p>10/01/2020 16:15:22</p>
