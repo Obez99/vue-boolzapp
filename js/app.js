@@ -7,7 +7,6 @@ const app = new Vue({
       {
         name: "Michele",
         image: "img/avatar_1.jpg",
-        date: "10/01/2020 16:15:22",
         messages: [
           {
             messageDate: "10/01/2020 15:30:55",
@@ -33,7 +32,6 @@ const app = new Vue({
       {
         name: "Fabio",
         image: "img/avatar_2.jpg",
-        date: "10/01/2020 16:15:22",
         messages: [
           {
             messageDate: "20/03/2020 16:30:00",
@@ -58,7 +56,6 @@ const app = new Vue({
       {
         name: "Samuele",
         image: "img/avatar_3.jpg",
-        date: "10/01/2020 16:15:22",
         messages: [
           {
             messageDate: "28/03/2020 10:10:40",
@@ -83,7 +80,6 @@ const app = new Vue({
       {
         name: "Luisa",
         image: "img/avatar_4.jpg",
-        date: "10/01/2020 16:15:22",
         messages: [
           {
             messageDate: "10/01/2020 15:30:55",
