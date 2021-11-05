@@ -111,7 +111,8 @@ const app = new Vue({
 
       const newMessage = {
         status: "sent",
-        text: str
+        text: str,
+        date: dayjs().format("DD/MM/YYYY HH:mm:ss")
       }
 
       this.activeChat.messages.push(newMessage);
