@@ -122,7 +122,8 @@ const app = new Vue({
         const newResponse =
         {
           status: "received",
-          text: "ok"
+          text: "ok",
+          date: dayjs().format("DD/MM/YYYY HH:mm:ss")
         }
 
         app.activeChat.messages.push(newResponse)
