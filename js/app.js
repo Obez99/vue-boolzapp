@@ -132,10 +132,14 @@ const app = new Vue({
       }, 1000)
     },
 
+    deleteMessage: function (i) {
+      this.activeChat.messages.splice(i, 1)
+    },
+
     nameSearch: function () {
       return this.contacts.filter((contact) => {
         return contact.name.toLowerCase().includes(this.contactSearch.trim().toLowerCase())
       })
-    }
+    },
   },
 })
