@@ -86,7 +86,7 @@
             <img :src="activeChat.image" :alt="activeChat.name">
             <div>
               <h5>{{activeChat.name}}</h5>
-              <p>Ultimo accesso oggi alle
+              <p>Ultimo accesso oggi alle {{getLastAccess()}}
               </p>
             </div>
           </div>

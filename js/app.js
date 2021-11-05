@@ -119,6 +119,7 @@ const app = new Vue({
       this.writtenMessage = "";
 
       setTimeout(function () {
+
         const newResponse =
         {
           status: "received",
@@ -148,6 +149,15 @@ const app = new Vue({
     getLastDate: function (i) {
       const arrLength = this.contacts[i].messages.length;
       return this.contacts[i].messages[arrLength - 1].date;
+    },
+
+    getLastAccess: function () {
+      const filteredArray = this.activeChat.messages.filter((message) => {
+        if (message.status === "received")
+          return message
+      })
+      const arrLength = filteredArray.length;
+      return filteredArray[arrLength - 1].date;
     }
   },
 })
