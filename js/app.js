@@ -102,7 +102,6 @@ const app = new Vue({
     activeChat: {},
     writtenMessage: "",
     contactSearch: "",
-    filteredContacts: []
   },
   methods: {
     setActiveChat: function (obj) {
@@ -134,9 +133,8 @@ const app = new Vue({
     },
 
     nameSearch: function () {
-      this.filteredContacts = this.contacts.filter(function (obj) {
-        if (obj.name.includes(app.contactSearch))
-          return obj
+      return this.contacts.filter((contact) => {
+        return contact.name.toLowerCase().includes(this.contactSearch.toLowerCase())
       })
     }
   },

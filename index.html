@@ -56,7 +56,7 @@
 
         <!--Left chats-->
         <div class="side-section-chats">
-          <div class="chat" v-for="contact in filteredContacts" @click="setActiveChat(contact)">
+          <div class="chat" v-for="contact in nameSearch()" @click="setActiveChat(contact)">
             <img :src="contact.image" :alt="contact.name">
             <div class="chat-preview">
               <h5>{{contact.name}}</h5>
