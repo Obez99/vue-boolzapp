@@ -86,7 +86,7 @@
             <img :src="activeChat.image" :alt="activeChat.name">
             <div>
               <h5>{{activeChat.name}}</h5>
-              <p>Ultimo accesso oggi alle {{getLastAccess()}}
+              <p>Ultimo accesso {{getLastAccess()}}
               </p>
             </div>
           </div>
@@ -102,11 +102,11 @@
         <!--Messages section-->
         <div class="right-section-main">
           <div class="message" v-for="(message,i) in activeChat.messages" :class="message.status">
-            <div class="dropdown" tabindex="0">
-              <div class=" btn" type="button">
+            <div class="dropdown">
+              <div class=" btn" type="button" @click="showDropdown(i)">
                 <i class="fas fa-chevron-down"></i>
               </div>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu" :class="message.dropDownShow ? 'show' : '' ">
                 <div class="dropdown-item" type="button">Info messaggio</div>
                 <div class="dropdown-item" type="button" @click="deleteMessage(i)">Cancella
                   messaggio</div>
