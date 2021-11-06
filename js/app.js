@@ -7,7 +7,7 @@ const app = new Vue({
       {
         name: "Michele",
         image: "img/avatar_1.jpg",
-        lastAccess: 0,
+        lastAccess: "10/01/2020 16:15:22",
         messages: [
           {
             date: "10/01/2020 15:30:55",
@@ -36,7 +36,7 @@ const app = new Vue({
       {
         name: "Fabio",
         image: "img/avatar_2.jpg",
-        lastAccess: 0,
+        lastAccess: "20/03/2020 16:35:00",
         messages: [
           {
             date: "20/03/2020 16:30:00",
@@ -64,7 +64,7 @@ const app = new Vue({
       {
         name: "Samuele",
         image: "img/avatar_3.jpg",
-        lastAccess: 0,
+        lastAccess: "28/03/2020 16:15:22",
         messages: [
           {
             date: "28/03/2020 10:10:40",
@@ -92,7 +92,7 @@ const app = new Vue({
       {
         name: "Luisa",
         image: "img/avatar_4.jpg",
-        lastAccess: 0,
+        lastAccess: "10/01/2020 15:50:00",
         messages: [
           {
             date: "10/01/2020 15:30:55",
@@ -144,6 +144,7 @@ const app = new Vue({
           dropDownShow: false
         }
 
+        app.activeChat.lastAccess = dayjs().format("DD/MM/YYYY HH:mm:ss")
         app.activeChat.messages.push(newResponse)
       }, 1000)
     },
@@ -174,30 +175,10 @@ const app = new Vue({
       return this.contacts[i].messages[arrLength - 1].date;
     },
 
-    getLastAccess: function () {
-      const filteredArray = this.activeChat.messages.filter((message) => {
-        if (message.status === "received")
-          return message
-      })
-      const arrLength = filteredArray.length;
+    showDropdown(i) {
 
-      if (arrLength < 1) return
-
-      /************************* */
-
-      console.log(filteredArray)
-      for (let i = 0; i < arrLength; i++) {
-        const currentDate = dayjs(filteredArray[i].date).unix()
-        console.log(currentDate);
-        console.log(filteredArray[i].date);
-      }
-
-
-      return dayjs.unix(this.activeChat.lastAccess)
+      this.activeChat.messages[i].dropDownShow = !this.activeChat.messages[i].dropDownShow
     },
 
-    showDropdown(i) {
-      this.activeChat.messages[i].dropDownShow = !this.activeChat.messages[i].dropDownShow
-    }
   },
 })

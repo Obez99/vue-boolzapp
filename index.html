@@ -74,7 +74,7 @@
       <div class="right-section">
 
         <!--No conversation overlay-->
-        <div class="main-overlay" v-if="!activeChat.name">
+        <div class=" main-overlay" v-if="!activeChat.name">
           <i class="fas fa-long-arrow-alt-left"></i>
           <h2>Dì ciao a qualcuno!</h2>
         </div>
@@ -86,7 +86,7 @@
             <img :src="activeChat.image" :alt="activeChat.name">
             <div>
               <h5>{{activeChat.name}}</h5>
-              <p>Ultimo accesso {{getLastAccess()}}
+              <p>Ultimo accesso {{activeChat.lastAccess}}
               </p>
             </div>
           </div>
