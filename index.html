@@ -107,7 +107,7 @@
               <div class=" btn" type="button" @click="showDropdown(i)">
                 <i class="fas fa-chevron-down"></i>
               </div>
-              <div class="dropdown-menu" :class="message.dropDownShow ? 'show' : '' ">
+              <div class="dropdown-menu" :style="message.dropDownShow ? 'z-index: 1; opacity: 1' : '' ">
                 <div class="dropdown-item" type="button">Info messaggio</div>
                 <div class="dropdown-item" type="button" @click="deleteMessage(i)">Cancella
                   messaggio</div>

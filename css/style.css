@@ -274,7 +274,7 @@ h5{
 }
 
 .dropdown-menu.show {
-  display: block;
+
 }
 
 .dropdown{
@@ -285,6 +285,10 @@ h5{
 
 .dropdown-menu{
   right:0;
+  opacity: 0;
+  display:block;
+  z-index: -1;
+  transition: opacity 0.3s;
 }
 
 .dropdown-item{
