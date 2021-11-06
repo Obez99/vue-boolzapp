@@ -244,11 +244,17 @@ h5{
 .sent{
   background-color: #d6f9be;
   margin-left: 65%;
+  animation: send;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
 }
 
 .received{
   background-color: white;
   margin-left: 40px;
+  animation:receive;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
 }
 
 .right-section-header{
@@ -294,3 +300,18 @@ h5{
 }
 
 /****************************************/
+
+/*ANIMATIONS*/
+/*************************/
+
+@keyframes send{
+  from{transform: translateX(350px)}
+  to{transform: translateX(0)}
+}
+
+@keyframes receive{
+  from{transform: translateX(-350px)}
+  to{transform: translateX(0)}
+}
+
+/*************************/
