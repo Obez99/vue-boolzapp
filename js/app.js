@@ -180,5 +180,11 @@ const app = new Vue({
       this.activeChat.messages[i].dropDownShow = !this.activeChat.messages[i].dropDownShow
     },
 
+    closeDropdown() {
+      this.activeChat.messages.forEach((message) => {
+        message.dropDownShow = false;
+      })
+    }
+
   },
 })

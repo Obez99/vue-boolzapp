@@ -101,7 +101,8 @@
 
         <!--Messages section-->
         <div class="right-section-main">
-          <div class="message" v-for="(message,i) in activeChat.messages" :class="message.status">
+          <div class="message" v-for="(message,i) in activeChat.messages" :class="message.status"
+            @mouseleave="closeDropdown()">
             <div class="dropdown">
               <div class=" btn" type="button" @click="showDropdown(i)">
                 <i class="fas fa-chevron-down"></i>
