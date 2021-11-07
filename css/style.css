@@ -244,17 +244,17 @@ h5{
 .sent{
   background-color: #d6f9be;
   margin-left: 65%;
-  animation: send;
+  /*animation: send;
   animation-duration: 0.3s;
-  animation-timing-function: linear;
+  animation-timing-function: linear;*/
 }
 
 .received{
   background-color: white;
   margin-left: 40px;
-  animation:receive;
+  /*animation:receive;
   animation-duration: 0.3s;
-  animation-timing-function: linear;
+  animation-timing-function: linear;*/
 }
 
 .right-section-header{
