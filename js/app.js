@@ -5,6 +5,7 @@ const app = new Vue({
   data: {
     contacts: [
       {
+        id: 1,
         name: "Michele",
         image: "img/avatar_1.jpg",
         lastAccess: "10/01/2020 16:15:22",
@@ -34,6 +35,7 @@ const app = new Vue({
       },
 
       {
+        id: 2,
         name: "Fabio",
         image: "img/avatar_2.jpg",
         lastAccess: "20/03/2020 16:35:00",
@@ -62,6 +64,7 @@ const app = new Vue({
       },
 
       {
+        id: 3,
         name: "Samuele",
         image: "img/avatar_3.jpg",
         lastAccess: "28/03/2020 16:15:22",
@@ -90,6 +93,7 @@ const app = new Vue({
       },
 
       {
+        id: 4,
         name: "Luisa",
         image: "img/avatar_4.jpg",
         lastAccess: "10/01/2020 15:50:00",
@@ -160,19 +164,21 @@ const app = new Vue({
     },
 
     getLastMessage: function (i) {
-      const arrLength = this.contacts[i].messages.length;
+      const currentContact = this.contacts.find(contact => contact.id === i)
+      const arrLength = currentContact.messages.length;
 
       if (arrLength < 1) return
 
-      return this.contacts[i].messages[arrLength - 1].text;
+      return currentContact.messages[arrLength - 1].text;
     },
 
     getLastDate: function (i) {
-      const arrLength = this.contacts[i].messages.length;
+      const currentContact = this.contacts.find(contact => contact.id === i)
+      const arrLength = currentContact.messages.length;
 
       if (arrLength < 1) return
 
-      return this.contacts[i].messages[arrLength - 1].date;
+      return currentContact.messages[arrLength - 1].date;
     },
 
     showDropdown(i) {

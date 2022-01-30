@@ -61,10 +61,10 @@
             <img :src="contact.image" :alt="contact.name">
             <div class="chat-preview">
               <h5>{{contact.name}}</h5>
-              <p>{{getLastMessage(i)}}</p>
+              <p>{{getLastMessage(contact.id)}}</p>
             </div>
             <div class="chat-preview-date">
-              <p>{{getLastDate(i)}}</p>
+              <p>{{getLastDate(contact.id)}}</p>
             </div>
           </div>
         </div>
