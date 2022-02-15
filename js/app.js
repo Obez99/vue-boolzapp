@@ -95,7 +95,7 @@ const app = new Vue({
       {
         id: 4,
         name: "Luisa",
-        image: "img/avatar_4.jpg",
+        image: "img/avatar_6.jpg",
         lastAccess: "10/01/2020 15:50:00",
         messages: [
           {
